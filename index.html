@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logitech</title>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        $(function () {
+            let a = document.querySelectorAll('a')
+            let headLi = document.querySelectorAll('.header .ul')
+            let depth01 = document.querySelectorAll('.depth01')
+            let depth02 = document.querySelectorAll('.depth02')
+            let bg = document.querySelector('.bg')
+            let main1Tag = document.querySelectorAll('.main1-tag li')
+            let main2Tag = document.querySelectorAll('.main2-tag li')
+            let main5P = document.querySelectorAll('.main5 .text p')
+            let main5Img = document.querySelectorAll('.main5 img')
+            let main5ImgLast = document.querySelector('.main5 img:last-child')
+            var swiper = new Swiper(".mySwiper", {
+                pagination: { el: ".swiper-pagination", type: "fraction", },
+                navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev", },
+            });
+
+            for (let i = 0; i < a.length; i++) {
+                a[i].addEventListener('click', (a) => {
+                    a.preventDefault();
+                })//a.click end
+            }//a.for end
+            //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+            for (let i = 0; i < headLi.length; i++) {
+                headLi[i].addEventListener('mouseover', () => {
+                    depth01.forEach((on) => {
+                        on.classList.add('on')
+                    })//forEach end
+                    depth02.forEach((on) => {
+                        on.classList.add('on')
+                    })//forEach end
+                    bg.classList.add('on')
+                })//headLi.mouseover end
+                headLi[i].addEventListener('mouseout', () => {
+                    depth01.forEach((on) => {
+                        on.classList.remove('on')
+                    })//forEach end
+                    depth02.forEach((on) => {
+                        on.classList.remove('on')
+                    })//forEach end
+                    bg.classList.remove('on')
+                })//headLi.mouseleave
+            }//for.headLi end
+            for (let i = 0; i < main1Tag.length; i++) {
+                main1Tag[i].addEventListener('mouseover', () => {
+                    main1Tag.forEach((remove) => {
+                        remove.classList.remove('on')
+                    })//forEach end
+                    main1Tag[i].classList.add('on')
+                })//main1Tag.mouseover end
+            }//for.main1Tag end
+            //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+            for (let i = 0; i < main2Tag.length; i++) {
+                main2Tag[i].addEventListener('mouseover', () => {
+                    main2Tag.forEach((remove) => {
+                        remove.classList.remove('on')
+                    })//forEach end
+                    main2Tag[i].classList.add('on')
+                })//main2Tag.mouseover end
+            }//for.main2Tag end
+            for (let i = 0; i < main5P.length; i++) {
+                main5P[i].addEventListener('mouseover', () => {
+                    main5P.forEach((remove) => {
+                        remove.classList.remove('on')
+                    })//forEach end
+                    main5Img.forEach((remove) => {
+                        remove.classList.remove('on')
+                    })//forEach end
+                    main5Img[4].classList.remove('black')
+                    main5P[i].classList.add('on')
+                    main5Img[i].classList.add('on')
+                    if (main5Img[1].className == 'on') {
+                        main5Img[4].classList.add('black')
+                        main5ImgLast.classList.add('none')
+                    }//if end
+                    else (main5ImgLast.classList.remove('none'))
+                    if (main5Img[3].className == 'on') {
+                        main5Img[4].classList.add('black')
+                        main5ImgLast.classList.add('none')
+                    }//if end
+                })//main5P.mouseover end
+            }//for.main5P end
+        })//$function end
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <figure>
+                <img src="img/logo.png" alt="">
+            </figure>
+            <nav class="nav">
+                <ul class="ul">
+                    <li class="li">
+                        <a href="#" class="depth01">SHOP</a>
+                        <ul class="depth02">
+                            <li>
+                                <img src="img/icons8-쥐-100.png" alt="">
+                                <a href="#">마우스</a>
+                            </li>
+                            <li><img src="img/icons8-건반-100.png" alt=""><a href="#">키보드</a></li>
+                            <li><img src="img/icons8-헤드폰-100.png" alt=""><a href="#">웹캠 및 오디오</a></li>
+                            <li><img src="img/icons8-노트북-100.png" alt=""><a href="#">게이밍용</a></li>
+                            <li><img src="img/icons8-기술-항목-100.png" alt=""><a href="#">신규 및 추천</a></li>
+                            <li><img src="img/icons8-창에서의-커서-100.png" alt=""><a href="#">모바일 솔루션</a></li>
+                            <li><img src="img/icons8-마음을-가진-마우스-100.png" alt=""><a href="#">비즈니스용</a></li>
+                            <li><img src="img/icons8-클릭하고-수집-100.png" alt=""><a href="#">교육용</a></li>
+                        </ul>
+                    </li><!-- .li end -->
+                    <li class="li">
+                        <a href="#" class="depth01">탐색하기</a>
+                        <ul class="depth02">
+                            <li><img src="img/icons8-to-do-list-64.png" alt=""><a href="#">지속가능성</a></li>
+                            <li><img src="img/icons8-책과-연필-100.png" alt=""><a href="#">회사 소개</a></li>
+                            <li><img src="img/icons8-alarm-64.png" alt=""><a href="#">ERGO 시리즈</a></li>
+                            <li><img src="img/icons8-clock-64.png" alt=""><a href="#">MX 시리즈</a></li>
+                        </ul>
+                    </li><!-- .li end -->
+                    <li class="li">
+                        <a href="#" class="depth01">비즈니스</a>
+                        <ul class="depth02">
+                            <li><img src="img/icons8-avatar-64.png" alt=""><a href="#">스페이스 & 솔루션</a></li>
+                            <li><img src="img/icons8-노트북과-아이폰-x-100.png" alt=""><a href="#">제품</a></li>
+                            <li><img src="img/icons8-다른-이름으로-저장-100.png" alt=""><a href="#">소프트웨어 & 서비스</a></li>
+                            <li><img src="img/icons8-모임-100.png" alt=""><a href="#">파트너</a></li>
+                        </ul>
+                    </li><!-- .li end -->
+                    <li class="li">
+                        <a href="#" class="depth01">지원</a>
+                        <ul class="depth02">
+                            <li><img src="img/icons8-사용자-남성-찾기-100.png" alt=""><a href="#">고객지원</a></li>
+                            <li><img src="img/icons8-악수-100.png" alt=""><a href="#">비즈니스 및 교육용</a></li>
+                        </ul>
+                    </li><!-- .li end -->
+                    <div class="bg"><span>헤더 추가배경</span></div>
+                </ul>
+            </nav><!-- .nav end -->
+            <div class="headerR">
+                <div id="form">
+                    <form action="" method="post"></form>
+                    <ul class="search">
+                        <li><input type="text" placeholder="1. 마우스"></li>
+                        <li><button><img src="img/Search_light@2x.svg" alt=""></button></li>
+                        <li><a href="#"><img src="img/User_alt_light@2x.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/Basket_alt_3_light@2x.svg" alt=""></a></li>
+                    </ul><!-- .search end -->
+                </div><!-- #form end -->
+            </div><!-- .headerR end -->
+        </div><!-- .inner end -->
+    </header><!-- .header end -->
+    <main class="main-visual">
+        <figure>
+            <!-- <a href="#"><img src="img/Main-visual.png" alt=""></a> -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="img/Main-visual.png" alt=""></a></div>
+                    <div class="swiper-slide">
+                        <video class="video" width="100%">
+                            <source type="video/mp4" src="https://x.com/Logitech/status/1575103038448189449">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">Slide 3</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </figure>
+    </main><!-- .main-visual end -->
+    <div class="main1">
+        <div class="title">
+            <H4>카테고리별 인기상품</H4>
+            <div class="main1-tag">
+                <ul>
+                    <a href="#">
+                        <li class="on">마우스</li>
+                    </a>
+                    <a href="#">
+                        <li>키보드</li>
+                    </a>
+                    <a href="#">
+                        <li>이어폰</li>
+                    </a>
+                    <a href="#">
+                        <li>스피커</li>
+                    </a>
+                    <a href="#">
+                        <li>헤드셋</li>
+                    </a>
+                    <a href="#">
+                        <li>모바일</li>
+                    </a>
+                    <a href="#">
+                        <li>비즈니스</li>
+                    </a>
+                    <a href="#">
+                        <li>솔루션</li>
+                    </a>
+                </ul>
+            </div><!-- .main1-tag end -->
+        </div><!-- .title end -->
+        <ul class="main1-item">
+            <li class="PC">
+                <a href="#">
+                    <div class="main1-text">
+                        <p>마스터 시리즈</p>
+                        <strong>MX MASTER 3S</strong>
+                        <p>무소음으로 새롭게 탄생한<br>
+                            최고급 무선 마우스</p>
+                        <b>112,660</b>
+                    </div><!-- .main1-text end -->
+                    <figure>
+                        <img src="img/Main1-item.png" alt="">
+                    </figure>
+                </a>
+            </li>
+            <li class="mobile">
+                <a href="#">
+                    <figure>
+                        <img src="img/Main1-item.png" alt="">
+                        <p>1</p>
+                    </figure>
+                    <div class="main1-text2">
+                        <b>MX MASTER 3S</b>
+                        <P>무소음으로 탄생한 최고급 무선 마우스</P>
+                        <strong>112,660원</strong>
+                    </div><!-- .main1-text2 end -->
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="img/main1-item2.png" alt="">
+                        <p>2</p>
+                    </figure>
+                    <div class="main1-text2">
+                        <b>MX ANYWHERE 3S FOR MAC</b>
+                        <P>최고급 무선 퍼포먼스 마우스</P>
+                        <strong>159,520원</strong>
+                    </div><!-- .main1-text2 end -->
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="img/main1-item3.png" alt="">
+                        <p>3</p>
+                    </figure>
+                    <div class="main1-text2">
+                        <b>PEBBLE MOUSE 2 M350S</b>
+                        <P>슬림한 디자인의 무소음 Bluetooth® 마우스</P>
+                        <strong>25,300 원</strong>
+                    </div><!-- .main1-text2 end -->
+                </a>
+            </li>
+        </ul><!-- .main1-item1 end -->
+    </div><!-- .main1 end -->
+    <div class="main2">
+        <div class="title">
+            <h4>추천 제품</h4>
+            <p>많은 사용자들에게 선택받은 제품</p>
+            <div class="main2-tag">
+                <ul>
+                    <li class="on"><a href="#">악세사리</a></li>
+                    <li><a href="#">비즈니스</a></li>
+                    <li><a href="#">화상회의용</a></li>
+                </ul>
+            </div><!-- .title end -->
+        </div><!-- .main2-tag end -->
+        <ul class="main2-list">
+            <li>
+                <a href="#">
+                    <h3>COMBO TOUCH FOR iPAD</h3>
+                    <p>백라이트 키보드 케이스</p>
+                    <img src="img/key1.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>RUGGED FOLIO</h3>
+                    <p>Smart Connector를 탑재한 케이스</p>
+                    <img src="img/key2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>SLIM FOLIO</h3>
+                    <p>Slim Foilo 키보드 케이스</p>
+                    <img src="img/key3.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>Logitech Craft</h3>
+                    <p>프리미엄 무선 키보드</p>
+                    <img src="img/board1.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>Mx key S</h3>
+                    <p>스마트 백라이트 키보드</p>
+                    <img src="img/board2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>Mx Mechanical</h3>
+                    <p>기계식 키보드</p>
+                    <img src="img/board3.png" alt="">
+                </a>
+            </li>
+        </ul><!-- .main2-list end -->
+    </div><!-- .main2 end -->
+    <div class="main3">
+        <a href="#">
+            <div class="main3-text">
+                <h4>집안을 지켜주는 홈 시큐리티</h4>
+                <b>TUREVIEW 업계 최고 수준의 비디오를 만나보세요.</b>
+                <p>자세히 알아보기</p>
+            </div><!-- .main3-text end -->
+            <figure>
+                <img src="img/main3-item.png" alt="">
+            </figure>
+        </a>
+    </div><!-- .main3 end -->
+    <div class="main4">
+        <div class="title">
+            <h4>MX Master 시리즈</h4>
+            <p>나에게 가장 잘 맞는 MX솔루션으로 잠재력을 깨워보세요<br>
+                가장 생산적인 셋업을 만들기 위한 노력을 고려해보세요</p>
+        </div><!-- title end -->
+        <ul class="main4-list">
+            <li>
+                <a href="#">
+                    <img src="img/템1.png" alt="">
+                    <div class="main4-text">
+                        <h4>개발자 : 미래</h4>
+                        <p>권장 : 개발자, 데이터 과학자,<br>
+                            금융 & 비즈니스 전문가</p>
+                    </div><!-- .main4-text end -->
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/템2.png" alt="">
+                    <div class="main4-text">
+                        <h4>광고전문가</h4>
+                        <p>권장 : 그래픽 디자이너, 3D 아티스트,<br>
+                            비디오 에디터</p>
+                    </div><!-- .main4-text end -->
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/템3.png" alt="">
+                    <div class="main4-text">
+                        <h4>고급 미니멀</h4>
+                        <p>권장 : 협소한셋업이나 임시 셋업에서<br>
+                            생산성을 높이고, 짧은 여행을 할 경우</p>
+                    </div><!-- .main4-text end -->
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/템4.png" alt="">
+                    <div class="main4-text">
+                        <h4>인체공학 애호가</h4>
+                        <p>권장 : 건강을 신경 쓰는 프로 크리에이터</p>
+                    </div><!-- .main4-text end -->
+                </a>
+            </li>
+        </ul><!-- .main4-list -->
+    </div><!-- .main4 end -->
+    <div class="main5">
+        <div class="inner">
+            <div class="title">
+                <h2>ERGO 시리즈
+                    <div>
+                        <span>Ergo 시리즈 파란띠</span>
+                    </div>
+                </h2>
+                <p>출근의 중심에서<br>
+                    ERGO를 외치다</p>
+            </div><!-- .title end -->
+            <figure>
+                <img class="on" src="img/main5-img2.png" alt="">
+                <img src="img/main5-img4.png" alt="">
+                <img src="img/main5-item.png" alt="">
+                <img src="img/main5-img3.png" alt="">
+                <img src="img/logo.png" alt="">
+                <img src="img/main5-item2.png" alt="">
+            </figure>
+            <div class="text">
+                <a href="#">
+                    <p class="on">01 해부학 이해</p>
+                </a>
+                <a href="#">
+                    <p>02 사람을 위한 디자인</p>
+                </a>
+                <a href="#">
+                    <p>03 최상의 편안함을 위한 테스트</p>
+                </a>
+                <a href="#">
+                    <p>04 픽셀급 정확도 테스트</p>
+                </a>
+            </div><!-- .text end -->
+        </div><!-- .inner end -->
+    </div><!-- .main5 end -->
+    <div class="main6">
+        <div class="inner">
+            <div class="item">
+                <a href="#">
+                    <b>소프트웨어 다운로드</b>
+                    <div>
+                        <p>이름, 모델 번호 또는 부품 번호로 제품을 검색할 수 있습니다.<br>
+                            제품을 검색하여 소프트웨어를 다운받으세요</p>
+                        <figure>
+                            <img src="img/Import_light@2x.svg" alt="">
+                        </figure>
+                    </div>
+                </a>
+            </div><!-- .item end -->
+            <div class="item">
+                <a href="#">
+                    <b>고객지원 전화번호</b>
+                    <div>
+                        <p>수신자 부담 번호<br>
+                            평일 09 : 00 ~ 18 : 00 / 주말 휴무</p>
+                        <div>
+                            <b>02-3143-9429</b>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- .item end -->
+        </div><!-- .inner end -->
+    </div><!-- .main6 end -->
+    <footer class="footer">
+        <div class="footerL">
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">홈페이지의견</a></li>
+                <li><a href="#">회사소개</a></li>
+            </ul>
+            <figure><a href="#"><img src="img/main5-item2.png" alt=""></a></figure>
+            <p>사업자 등록번호 : 107-86-10308 ㅣ 로지텍 코리아 대표이사 : PAD, YA-CHING</p>
+            <p>주소 : 서울특별시 영등포구 여의공원로 101, CCMM 빌딩 402B</p>
+            <p>고객지원센터(제품 및 AS문의처) ㅣ 대표 전화 : 02-3143-9429</p>
+        </div><!-- .footerL end -->
+        <div class="footerR">
+            <button>logitech site
+                <img src="img/arrow-bottom.png" alt="">
+            </button>
+            <figure>
+                <a href="#"><img src="img/footer-icon1.png" alt=""></a>
+                <a href="#"><img src="img/footer-icon2.png" alt=""></a>
+                <a href="#"><img src="img/footer-icon3.png" alt=""></a>
+            </figure>
+            <p>ⓒ2024 로지텍. All rights reserved</p>
+        </div><!-- .footerR end -->
+    </footer><!-- .footer end -->
+</body>
+<!-- 임시로 적어보는 테스트용 태그 -->
+
+</html>

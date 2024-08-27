@@ -1,0 +1,540 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+*{margin:0;padding:0;box-sizing: border-box;}
+a{text-decoration: none;color:inherit;}
+body{line-height: 1;color:#333;font-family: 'Pretendard';}
+li{list-style: none;}
+html {font-size:62.5%;}
+.mobile {display: none;}
+.header {
+    width: calc(100% - 10rem - 10rem);
+    margin-left: 10rem;
+}
+.header .bg {
+    width: 100%;
+    height: 45rem;
+    background-color:#fff;
+    position: absolute;
+    left: 0;
+    top: 10rem;
+    display: none;
+}
+.header .bg.on {
+    display: block;
+    z-index: 10;
+}
+.header .bg span {position:absolute;left:-99999999999px;}
+.header .inner {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .inner .nav {}
+.header .inner .nav > ul {display: flex;}
+.header .inner .nav ul > li {position: relative;}
+.header .inner .nav ul > li .depth01 {
+    display: block;
+    line-height: 10rem;
+    height: 10rem;
+    padding: 0 3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: 1s;
+}
+.header .inner .nav ul > li .depth01.on {padding: 0 7rem;}
+.header .inner .nav ul > li .depth02 {
+    width: 20rem;
+    position: absolute;
+    left: 30%;
+    transform: translateX(-5%);
+    top: 12rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: none;
+    z-index: 99;
+}
+.header .inner .nav ul > li:first-child ~ .depth02 {}
+.header .inner .nav ul > li .depth02 img {
+    width: 5rem;
+    /* padding-top: 2rem; */
+}
+.header .inner .nav ul > li .depth02.on {
+    display: inline;
+}
+.header .inner .nav ul > li .depth02 li {
+    display: flex;
+}
+.header .inner .nav ul > li .depth02 li a {
+    /* height: 100%; */
+    display: block;
+    /* transform: translateY(-50%); */
+    line-height: 5rem
+}
+.header .inner .nav ul > li:first-child ~ li .depth02 li a {
+    display: block;
+    text-align: start;
+    /* margin: 0 auto; */
+}
+.header .inner .headerR {}
+.header .inner .headerR #form .search {
+    /* border: none; */
+    position: relative;
+    display: flex;
+}
+.header .inner .headerR #form .search li input {
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    padding: 0 15px;
+    background-color: #d9d9d9;
+}
+.header .inner .headerR #form .search img {
+    width: 35px;
+}
+.header .inner .headerR #form button {
+    position: absolute;
+    right: 90px;    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: #d9d9d9;
+}
+.main-visual {}
+.main-visual figure {}
+.main-visual figure img {width: 100%;height: 90vh;}
+.swiper-pagination {
+    width: 8rem;
+    height: 4rem;
+    line-height: 4rem;
+    border-radius: 25px;
+    color: #fff;
+    position: absolute;
+    left: 85%;
+    bottom: 15rem;
+    font-size: 2rem;
+    background-color: #33333388;
+}
+.swiper-pagination-fraction {/* left: var(--swiper-pagination-top, auto); */}
+.main1 {
+    margin: 7rem 24rem;
+    max-width: 1440px;
+    width: calc(100% - 24rem - 24rem);
+}
+.main1 .title {}
+.main1 .title h4 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.main1 .title h4 {}
+.main1 .title .main1-tag {margin-bottom: 60px;}
+.main1 .title .main1-tag ul {
+    display: flex;
+}
+.main1 .title .main1-tag ul a {}
+.main1 .title .main1-tag ul a li.on {background-color: #1db6e7;}
+.main1 .title .main1-tag ul a li {
+    font-size: 1.6rem;
+    width: 9.5rem;
+    height: 4rem;
+    border: 1px solid #dddddd;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 4rem;
+    margin-right: 1rem;
+    transition: .3s;
+}
+.main1 .main1-item {display: flex;justify-content: space-between;margin-bottom: 7.5rem;}
+.main1 .main1-item li {
+    width: 34rem;
+    height: 34rem;
+    background-color: #f3f3f3;
+    border-radius: 2rem;
+}
+.main1 .main1-item li.PC {width: 60.5rem;height: 44.5rem;}
+.main1 .main1-item li.PC a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.main1 .main1-item li.PC a .main1-text {
+    margin: 6rem 3rem;
+}
+.main1 .main1-item li a .main1-text {
+}
+.main1 .main1-item li.PC a .main1-text p:first-child {
+    font-size:1.4rem;text-decoration:underline;
+    margin-bottom: .7rem;
+}
+.main1 .main1-item li a .main1-text strong {
+    font-size: 3.5rem;
+    margin-bottom: .7rem;
+    display: block;
+}
+.main1 .main1-item li.PC a .main1-text p:last-of-type {
+    font-size: 2.0rem;
+    margin-bottom: 3.5rem;
+    line-height: 1.3;
+}
+.main1 .main1-item li a .main1-text b {font-size: 2.2rem;}
+.main1 .main1-item li a {position: relative;}
+.main1 .main1-item li a figure {
+    width: 34rem;
+    height: 100%;
+}
+.main1 .main1-item li a img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(50%, 50%);
+}
+.main1 .main1-item li.PC a img {
+    width: 25rem;
+    height: 31rem;
+    margin: 6rem 3rem;
+    left: 25%;
+    top: -30%;
+}
+.main1 .main1-item li:not(.PC) a img {left: 10%;top: -5rem;}
+.main1 .main1-item li:last-child a img {top: -8rem;}
+.main1 .main1-item li:not(.PC) a figure p {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #1db6e7;
+    margin: 1.5rem;
+}
+.main1 .main1-item li:not(.PC) a .main1-text2 b {display: block;font-size: 2rem;margin-top: 2rem;}
+.main1 .main1-item li:not(.PC) a .main1-text2 p {font-size: 1.6rem;margin-top: .7rem;color:#a2a2a2;}
+.main1 .main1-item li:not(.PC) a .main1-text2 strong {display: block;font-size: 2.2rem;margin-top: 2.5rem;}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ main1 end ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+.main2 {
+    max-width: 144rem;
+    width: calc(100% - 24rem - 24rem);
+    margin-left: 24rem;
+    display: flex;
+    margin-bottom: 10rem;}
+.main2 .title {
+    width: 34rem;
+    margin-right: 2.5rem;
+}
+.main2 .title h4 {font-size: 4rem;margin-bottom: 2rem;}
+.main2 .title p {font-size: 2rem;margin-bottom: 6rem;color: #999999;width: 30rem;}
+.main2 .title .main2-tag ul li {
+    width: 9.5rem;
+    height:4rem;
+    text-align: center;
+    line-height: 4rem;
+    border-radius: 25px;
+    background-color: #f3f3f3;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    transition: .2s;
+}
+.main2 .title .main2-tag ul li.on {background-color: #1db6e7;}
+.main2 img {width: 25rem; height: 17rem;}
+.main2 .main2-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap:2.4rem;
+}
+.main2 .main2-list li {
+    width: 34rem;
+    height: 34rem;
+    background-color: #f3f3f3;
+    border-radius: 2rem;
+    padding: 3rem 0 3rem 3rem;
+    /* margin:0 0 2.4rem 2.4rem; */
+    position: relative;
+    overflow: hidden;
+}
+.main2 .main2-list li a {
+    width: 34rem;
+    height: 34rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3rem 0 3rem 3rem;
+    display: block;
+}
+.main2 .main2-list li a h3 {font-size: 2.3rem;margin-bottom: 1rem;}
+.main2 .main2-list li a p {font-size: 1.6rem;color: #999999;margin-bottom: 4.2rem;}
+.main2 .main2-list li a img {
+    position: absolute;
+    left: 30%;
+    top: 40%;
+}
+.main3 {
+    max-width: 144rem;
+    width: calc(100% - 24rem - 24rem);
+    height:25rem;
+    margin-left: 24rem;
+    border-radius: 2.5rem;
+    background-color: #000;
+    margin-bottom: 10rem;
+    padding: 4.5rem 8rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.main3 a {
+    width: 100%;
+    height: 100%;
+    /* padding: 4.5rem 8rem; */
+    display: block;
+}
+.main3 h4 {    font-size: 3.5rem;}
+.main3 b {font-size: 1.8rem;margin-top: 2rem;display: block;}
+.main3 p {font-size: 1.6rem;margin-top: 8rem;}
+.main3 figure {
+    width: 100%;
+    height: 100%;
+}
+.main3 figure img {
+    position: absolute;
+    right: 8rem;
+    top: -3rem;
+}
+.main4 {
+    max-width: 144rem;
+    width: calc(100% - 24rem - 24rem);
+    margin-left: 24rem;
+    margin-bottom: 10rem;
+}
+.main4 .title h4 {font-size: 4rem;margin-bottom: 3rem;}
+.main4 .title p {font-size: 2rem;margin-bottom: 6rem;line-height: 1.3;}
+.main4 .main4-list {
+    display: flex;
+    justify-content: space-between;
+}
+.main4 .main4-list li {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2.5rem;
+}
+.main4 .main4-list li img {
+    width: 34.5rem;
+    height: 45rem;
+    border-radius: 2.5rem;
+    transition: .3s;
+}
+.main4 .main4-list li img:hover {
+    transform: scale(1.15);
+}
+.main4 .main4-list .main4-text {
+    height: 15rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    padding: 3.3rem;
+}
+.main4 .main4-list .main4-text h4 {font-size: 3rem;margin-bottom: 2rem;}
+.main4 .main4-list .main4-text p {font-size: 1.6rem;line-height: 1.3;}
+.main4 .main4-list li:last-child .main4-text p {line-height: 4.1rem;}/* 1줄이라 만든 라인하이트 */
+.main5 {
+    max-width: 144rem;
+    width: calc(100% - 24rem - 24rem);
+    margin-left: 24rem;
+    margin-bottom: 10rem;
+}
+.main5 .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main5 .inner .title {}
+.main5 .inner .title h2 {
+    font-size: 7rem;
+    position: relative;
+    z-index: 999;
+    margin-bottom: 2.2rem;
+}
+.main5 .inner .title p {
+    font-size: 3.5rem;
+    line-height: 1.3;
+}
+.main5 .inner .title div {
+    width: 100.5%;
+    height: 3.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #1db6e7;
+    z-index: -1;
+}
+.main5 .inner .title div span {
+    position:absolute;
+    left:-999999999999999px;}
+.main5 .inner figure {
+    width: 62.1rem;
+    height: 62.1rem;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    position: relative;
+}
+.main5 .inner figure img:not(:last-child) {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.main5 .inner figure img:not(:last-child).on {display: block;}
+.main5 .inner figure img:last-child {
+    position: absolute;
+    left: 2rem;
+    top: 1.5rem;
+}
+.main5 .inner figure img:last-child.none {display: none;}
+.main5 .inner figure img.black {
+    width: 12.6rem;
+    height: 3.9rem;
+    display: block;
+    position: absolute;
+    left: 2rem;
+    top: 1.5rem;
+}
+.main5 .inner .text {
+    font-size: 2rem;
+    line-height: 10rem;
+}
+.main5 .inner .text p {
+    width: 34rem;
+    height: 10rem;
+    border-top: 1px solid #999999;
+    color: #999999;
+}
+.main5 .inner .text p.on {
+    color: #333;
+    border-top: 1px solid #333;
+}
+.main6 {
+    max-width: 144rem;
+    width: calc(100% - 24rem - 24rem);
+    margin-left: 24rem;
+    margin-bottom: 10rem;
+}
+.main6 .inner {
+    display: flex;
+    justify-content: space-between  ;
+}
+.main6 .inner .item {
+    width: 70rem;
+    height: 16.5rem;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    padding: 3.2rem;
+    position: relative;
+}.main6 .inner .item a {
+    width: 70rem;
+    height: 16.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3.2rem;
+}
+.main6 .inner .item a b {font-size: 2.2rem;}
+.main6 .inner .item a div {
+    display: flex;
+    justify-content: space-between;
+}
+.main6 .inner .item a div p {
+    font-size: 2rem;
+    margin-top: 4rem;
+    line-height: 1.3;
+}
+.main6 .inner .item a:first-child img {width: 6rem;}
+.main6 .inner .item a div b {
+    font-size: 3.5rem;
+    line-height: 6rem;
+}
+.footer {
+    width: 100%;
+    height: 35rem;
+    padding: 5rem 24rem 9rem;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .footerL ul {display: flex;}
+.footer .footerL ul li {
+    font-size: 1.6rem;
+    margin-right: 1.5rem;
+    margin-bottom: 6rem;
+    position: relative;
+}
+.footer .footerL ul a {position: relative;}
+.footer .footerL ul li:not(:last-child) a:before {
+    content:'';
+    width: .1rem;
+    height: 1.6rem;
+    background-color: #fff;
+    position: absolute;
+    right: -.8rem;
+    top: 0;
+}
+.footer .footerL figure {margin-bottom: 4rem;}
+.footer .footerL p {
+    line-height: 1.5;
+    font-size: 1.6rem;
+}
+.footer .footerR button {
+    width: 24rem;
+    height: 4rem;
+    border-radius: 1rem;
+    padding: 0 0 0 1rem;
+    line-height: 4rem;
+    color: #999999;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+}
+.footer .footerR button img {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+}
+.footer .footerR figure {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 11rem;
+}
+.footer .footerR figure img {padding-left: 2rem;}
+.footer .footerR p {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.6rem;
+}
+@media screen and (max-width:1020px) {
+    .PC {display: none;}
+    .mobile {display: block;}
+    .main1 {
+        width: 102rem;
+        margin: 3rem 1.5rem;
+    }
+    .main1 .main1-item li.PC {display: none;}
+    .main1 .main1-item li a figure {width: 32rem;}
+    .main2 {PADDING: 3rem 1.5rem;}
+    .main6 .inner .item a {
+        width: 33%;
+    }
+}
+
+/* 필요없는 선택자 다 지울것 */
